@@ -983,11 +983,19 @@ void NZBGet::Daemonize()
 			// Set aux groups to null.
 			setgroups(0, (const gid_t*)0);
 			// Set primary group.
-			setgid(pw->pw_gid);
+			if (setgid(pw->pw_gid))
+			{
+				error("Can't set gid to %u", pw->pw_gid);
+				exit(1);
+			}
 			// Try setting aux groups correctly - not critical if this fails.
 			initgroups(m_options->GetDaemonUsername(), pw->pw_gid);
 			// Finally, set uid.
-			setuid(pw->pw_uid);
+			if (setuid(pw->pw_uid))
+			{
+				error("Can't set uid to %u", pw->pw_uid);
+				exit(1);
+			}
 		}
 	}
 
