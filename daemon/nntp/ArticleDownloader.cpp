@@ -335,7 +335,7 @@ ArticleDownloader::EStatus ArticleDownloader::Download()
 	m_decoder.SetRawMode(g_Options->GetRawArticle());
 
 	status = adRunning;
-	CharBuffer lineBuf(1024*4);
+	CharBuffer lineBuf(1024*1024);
 
 	while (!IsStopped() && !m_decoder.GetEof())
 	{
