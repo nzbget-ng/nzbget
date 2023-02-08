@@ -18,6 +18,7 @@
  */
 
 body {
+	background-color: #000000 !important;
 	padding-left: 0;
 	padding-right: 0;
 }
@@ -36,12 +37,13 @@ body {
 	-webkit-box-shadow: none;
 	-moz-box-shadow: none;
 	box-shadow: none;
-	color: #bbb;
+	color: #aaa;
 }
 
 /* fixed navbar (applied dynamically if screen is wide enough) */
 body.navfixed {
 	margin-top: 57px;
+	color: #b8b8b8;
 }
 
 body.navfixed .navbar-fixed-top  {
@@ -159,8 +161,8 @@ body.navfixed.scrolled .navbar-fixed-top .navbar-inner {
 #PlayCaret {
 	margin-top: 3px;
 	margin-left: 9px;
-	border-top-color: #ffffff;
-	border-bottom-color: #ffffff;
+	border-top-color: #0f0f0f;
+	border-bottom-color: #0f0f0f;
 	opacity: 0.75;
 	filter: alpha(opacity=75);
 }
@@ -226,7 +228,7 @@ body.navfixed.scrolled .navbar-fixed-top .navbar-inner {
 }
 
 #InfoBlock div:hover {
-	color: #fff;
+	color: #00f;
 }
 
 #InfoBlock i {
@@ -240,15 +242,15 @@ body.navfixed.scrolled .navbar-fixed-top .navbar-inner {
 
 #InfoBlock div:hover i {
 	opacity: 1;
-	filter: alpha(opacity=100);
+	filter: alpha(opacity=50);
 }
 
 #StatusTime.orange {
-	color: #F08929;
+	color: #008929;
 }
 
 #StatusTime.orange:hover {
-	color: #FFA15A;
+	color: #00A15A;
 }
 
 .navbar-inner .btn:hover i {
@@ -287,14 +289,14 @@ body.navfixed.scrolled .navbar-fixed-top .navbar-inner {
 	outline: 0;
 	color: #000;
 	text-shadow: none;
-	background: rgb(255,255,255); /* Old browsers */
+	background: rgb(15,15,15); /* Old browsers */
 	background: -moz-linear-gradient(top,  rgb(255,255,255) 0%, rgb(238,238,238) 45%, rgb(231,231,231) 55%, rgb(255,255,255) 100%); /* FF3.6+ */
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgb(255,255,255)), color-stop(45%,rgb(238,238,238)), color-stop(55%,rgb(231,231,231)), color-stop(100%,rgb(255,255,255))); /* Chrome,Safari4+ */
 	background: -webkit-linear-gradient(top,  rgb(255,255,255) 0%,rgb(238,238,238) 45%,rgb(231,231,231) 55%,rgb(255,255,255) 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top,  rgb(255,255,255) 0%,rgb(238,238,238) 45%,rgb(231,231,231) 55%,rgb(255,255,255) 100%); /* Opera 11.10+ */
+	background: -o-linear-gradient(top,  rgb(0,255,255) 0%,rgb(238,238,238) 45%,rgb(231,231,231) 55%,rgb(255,255,255) 100%); /* Opera 11.10+ */
 	background: -ms-linear-gradient(top,  rgb(255,255,255) 0%,rgb(238,238,238) 45%,rgb(231,231,231) 55%,rgb(255,255,255) 100%); /* IE10+ */
 	background: linear-gradient(to bottom,  rgb(255,255,255) 0%,rgb(238,238,238) 45%,rgb(231,231,231) 55%,rgb(255,255,255) 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0f0f0f', endColorstr='#0f0f0f',GradientType=0 ); /* IE6-9 */
 }
 
 #NavLinks .badge {
@@ -323,7 +325,7 @@ body.navfixed.scrolled .navbar-fixed-top .navbar-inner {
 	font-size: 11px;
 	font-weight: bold;
 	line-height: 18px;
-	color: #999999;
+	color: #090909;
 	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
 	text-transform: uppercase;
 }
@@ -390,8 +392,8 @@ body.navfixed.scrolled .navbar-fixed-top .navbar-inner {
 .search-caret-button .caret {
 	margin-top: 3px;
 	margin-left: 9px;
-	border-top-color: #ffffff;
-	border-bottom-color: #ffffff;
+	border-top-color: #0f0f0f;
+	border-bottom-color: #0f0f0f;
 	opacity: 0.75;
 	filter: alpha(opacity=75);
 }
@@ -768,15 +770,16 @@ ul.dropdown-menu > li > a > i {
 
 /* links in black color */
 .table a {
-	color: #000000;
+	color: #5F5F5F;
 }
 
 /* links in black color */
 .table a:hover {
-	color: #000000;
+	color: #777777;
 }
 
 .table a.badge-link:hover {
+	color: #888888;
 	text-decoration: none;
 }
 
@@ -974,7 +977,7 @@ form {
 }
 
 .badge-active {
-    background-color: #FFFFFF;
+    background-color: #0f0f0f;
     color: #000000;
     text-shadow: none;
 }
@@ -1003,12 +1006,12 @@ table th.text-center {
 	text-align: center;
 }
 
-.table-striped tbody tr:nth-child(odd) {
-  background-color: #f9f9f9;
+.table-striped tbody tr:nth-child(odd) td {
+  background-color: #090909;
 }
 
-.table tbody tr:hover  {
-  background-color: #f5f5f5;
+.table tbody tr:hover  td {
+  background-color: #050505;
 }
 
 .table th, .table td {
@@ -1027,11 +1030,11 @@ table th.text-center {
 
 table > thead > tr > th.table-selector {
 	text-align: center;
-	background: repeating-linear-gradient(-45deg, #FFFFD8, #FFFFD8 6px, #E7E8D1 6px, #E7E8D1 12px);
+	background: repeating-linear-gradient(-45deg, #0F0F08, #0F0F08 6px, #E7E8D1 6px, #E7E8D1 12px);
 	padding: 2px;
 	font-size: 12px;
 	line-height: 14px;
-	color: #966C38;
+	color: #060C08;
 	text-shadow: 0 -1px 0 rgba(255, 255, 255, 0.75), 0 1px 0 rgba(255, 255, 255, 0.75), -1px 0 0 rgba(255, 255, 255, 0.75);
 }
 
@@ -1057,7 +1060,7 @@ div.check {
 	border-radius: 2px;
 }
 div.check:hover {
-	border: 1px solid #0088cc;
+	border: 1px solid #00181c;
 }
 
 th > div.check {
@@ -1079,28 +1082,28 @@ table.table-cancheck tr.checkremove div.img-check {
 tr.checked,
 tr.checked td,
 tr.checked:nth-child(odd) .progress {
-	background-color: #FFFFE8;
+	background-color: #0F0F88;
 }
 
 .table-striped tbody tr.checked:nth-child(odd) td,
 .checked .progress {
-	background-color: #FFFFD8;
+	background-color: #0F0FD8;
 }
 
 .table tbody tr.checked:hover,
 .table tbody tr.checked:hover td {
-	background-color: #FFFFC0;
+	background-color: #0F0FC0;
 }
 
 .check-simple tr.checked,
 .check-simple tr.checked td,
 .table-striped.check-simple tbody tr.checked:nth-child(odd) td {
-	background-color: inherit;
+	background-color: #0F0FC0;
 }
 
 .table.check-simple tbody tr.checked:hover,
 .table.check-simple tbody tr.checked:hover td {
-  background-color: #f5f5f5;
+  background-color: #050505;
 }
 
 table.table-hidecheck thead > tr > th:first-child,
@@ -1109,7 +1112,7 @@ table.table-hidecheck tbody > tr > td:first-child {
 }
 
 .checked .progress {
-	background-color: #FFFFE1;
+	background-color: #0F0F01;
 }
 /* END: Checkmarks in the table */
 
@@ -1117,17 +1120,17 @@ table.table-hidecheck tbody > tr > td:first-child {
 /* BEGIN: Progress bars */
 .progress-block {
 	position: relative;
-	width: calc(8.5rem);
+	width: calc(40.10rem);
 }
 
 .progress {
 	margin-bottom: 0px;
-	background: #f0f0f0;
+	background: #1a1a1a;
 }
 
 /* style for queued downloads, based on ".progress-success.progress-striped .bar" from bootstrap.css */
 .progress-none.progress-striped .bar {
-	background-color: #c0c0c0;
+	background-color: #000000;
 	background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.25, rgba(255, 255, 255, 0.15)), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, rgba(255, 255, 255, 0.15)), color-stop(0.75, rgba(255, 255, 255, 0.15)), color-stop(0.75, transparent), to(transparent));
 	background-image: -webkit-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
 	background-image: -moz-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
@@ -1136,7 +1139,15 @@ table.table-hidecheck tbody > tr > td:first-child {
 	background-image: linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
 	filter: progid:dximagetransform.microsoft.gradient(startColorstr='#d0d0d0', endColorstr='#c0c0c0', GradientType=0);
 }
-
+.progress .progress-value {
+    display: block;
+    font-size: 18px;
+    font-weight: 500;
+    color: black;
+    position: absolute;
+    top: -30px;
+    right: -25px
+}
 /* text on left side of progress bar */
 .bar-text-left {
 	position: absolute;
@@ -1207,7 +1218,7 @@ td.dropdown-cell > div:not(.dropdown-disabled):hover::after {
 }
 
 .dropdown-menu li:not(:hover) .empty-item {
-	color: #bbb;
+	color: #222;
 }
 
 .dropdown-warning {
@@ -1216,7 +1227,7 @@ td.dropdown-cell > div:not(.dropdown-disabled):hover::after {
 	padding: 2px;
 	font-size: 12px;
 	line-height: 14px;
-	color: #966C38;
+	color: #060C08;
 	text-shadow: 0 -1px 0 rgba(255, 255, 255, 0.75), 0 1px 0 rgba(255, 255, 255, 0.75), -1px 0 0 rgba(255, 255, 255, 0.75);
 	border-top: solid 1px #ccc;
 	border-bottom: solid 1px #ccc;
@@ -1248,7 +1259,7 @@ td span.none-category {
 }
 
 td:hover span.none-category {
-	color: #aaa;
+	color: #333;
 }
 
 /* controls */
@@ -1362,7 +1373,7 @@ textarea[readonly],
   width: 340px;
   overflow: hidden;
   cursor: not-allowed;
-  background-color: #ffffff;
+  background-color: #0f0f0f;
   border-color: #eee;
   border: 1px solid #eee;
   padding: 4px;
@@ -1416,7 +1427,7 @@ textarea[readonly],
 }
 
 .dragover, .dragover .table-striped tbody tr:nth-child(odd) td, .dragover .table-striped tbody tr:nth-child(odd) th {
-	background-color: #dff0d8;
+	background-color: #0f0008;
 }
 
 ul.help > li {
@@ -1436,7 +1447,7 @@ ul.help > li {
 
 /* BEGIN: PopupNotification alerts */
 .alert-inverse {
-	color: #ffffff;
+	color: #0f0f0f;
 	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
 	background-color: #414141;
 	border-color: #222222;
@@ -1486,7 +1497,7 @@ ul.help > li {
 
 .table .btn-success,
 .table .btn-success:hover {
-	color: #ffffff;
+	color: #0f0f0f;
 }
 
 .btn-group {
@@ -1613,7 +1624,7 @@ ul.help > li {
 
 /*** CONFIG PAGE */
 #ConfigNav.nav-list a {
-    color: #000;
+    color: #F00;
     text-decoration: none;
 	padding-top: 5px;
 	padding-bottom: 5px;
@@ -1627,8 +1638,8 @@ ul.help > li {
 
 #ConfigNav.nav-list > .active > a,
 #ConfigNav.nav-list > .active > a:hover {
-    color: #ffffff;
-    *background-color: #505050;
+    color: #0f0f0f;
+    *background-color: #303030;
 }
 
 #ConfigNav.nav .nav-header {
@@ -1641,7 +1652,7 @@ ul.help > li {
 	border-radius: 3px;
 	border: 1px solid #eeeeee;
 	padding: 8px 15px;
-	background-color: #F7F7F9;
+	background-color: #070707;
 	margin-bottom: 15px;
 }
 
@@ -1670,7 +1681,7 @@ ul.help > li {
 .config-header .btn {
 	margin-top: 7px;
 	margin-right: 0;
-	background-color: #ffffff;
+	background-color: #0f0f0f;
 	background-image: none;
 	border: none;
   -webkit-box-shadow: none;
@@ -1679,11 +1690,11 @@ ul.help > li {
 }
 
 span.help-option-title {
-	color: #8D1212;
+	color: #0D1212;
 }
 
 .failure-message {
-	color: #8D1212;
+	color: #0D1212;
 }
 
 #ConfigContent p.help-block {
@@ -1744,7 +1755,7 @@ div.ConfigFooter {
 	font-size: 14px;
 	font-weight: bold;
 	background-color: #505050;
-	color: #ffffff;
+	color: #0f0f0f;
 	padding: 7px;
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
@@ -1758,7 +1769,7 @@ div.ConfigFooter {
 }
 
 .config-multicaption {
-	color: #c0c0c0;
+	color: #0c0c0c;
 	font-weight: normal;
 }
 
@@ -1893,7 +1904,7 @@ div.multiset-toolbar button {
 
 #UpdateDialog_Versions #UpdateDialog_AvailRow td:hover,
 #UpdateDialog_Versions tr:hover td {
-	background-color: #ffffff;
+	background-color: #0f0f0f;
 }
 
 #UpdateDialog_Hint p {
@@ -1913,7 +1924,7 @@ div.multiset-toolbar button {
 
 .log-dialog .modal-body pre {
 	min-height: 270px;
-	background-color: #222222;
+	background-color: #020202;
 	color: #cccccc;
 	padding: 3px 6px;
 	margin-bottom: 0px;
@@ -1975,7 +1986,7 @@ div.multiset-toolbar button {
 	width: 32px;
 	height: auto;
 	overflow: hidden;
-	background-color: #ffffff;
+	background-color: #0f0f0f;
 	border-right: 1px solid #ccc;
 	border-right: 1px solid rgba(0, 0, 0, 0.15);
 }
@@ -2002,7 +2013,7 @@ div.multiset-toolbar button {
 	width: auto;
 	padding-left: 3px;
 	height: auto;
-	background-color: #ffffff;
+	background-color: #0f0f0f;
 }
 
 #FeedFilterDialog_FilterInput {
@@ -2071,7 +2082,7 @@ div.multiset-toolbar button {
 	top: 100px;
 	text-align: center;
 	border: 1px solid #ccc;
-	background-color: #f8f8f8;
+	background-color: #080808;
 	display: none;
 	cursor: grabbing;
 	cursor: -webkit-grabbing;
@@ -2084,8 +2095,8 @@ div.multiset-toolbar button {
 	top: -12px;
 	text-align: center;
 	padding: 1px 6px;
-	color: #fff;
-	background-color: #D70015;
+	color: #000;
+	background-color: #070015;
 }
 
 .phone #TableDragBox .badge {
@@ -2131,7 +2142,7 @@ table.table-drag > tbody > tr > td:first-child > div.check {
 }
 
 tr.drag-source > td {
-	background-color: #fff !important;
+	background-color: #000 !important;
 	color: #fff !important;
 	visibility: visible;
 }
@@ -2143,7 +2154,7 @@ tr.drag-source > td > * {
 .table-striped tbody tr.drag-finish td,
 .table-striped tbody tr.drag-finish .progress,
 .table-striped tbody tr.drag-finish td a {
-	background-color: #E6FAE4 !important;
+	background-color: #060A04 !important;
 }
 
 
