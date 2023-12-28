@@ -100,7 +100,7 @@ AC_FUNC_MKTIME
 AC_FUNC_REALLOC
 AC_FUNC_STRERROR_R
 AC_FUNC_STRNLEN
-AC_CHECK_FUNCS([bzero dup2 fdatasync floor getcwd gethostbyname gettimeofday inet_ntoa memchr memmove memset mkdir pow realpath regcomp rmdir select socket strcasecmp strchr strdup strerror strncasecmp strpbrk strrchr strspn strstr strtol strtoul])
+AC_CHECK_FUNCS([bzero dup2 fdatasync floor getcwd gethostbyname gettimeofday inet_ntoa memchr memmove memset mkdir posix_fallocate pow realpath regcomp rmdir select socket strcasecmp strchr strdup strerror strncasecmp strpbrk strrchr strspn strstr strtol strtoul])
 
 #
 # Android NDK restrictions
