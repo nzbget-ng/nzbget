@@ -1019,7 +1019,7 @@ void NZBGet::Daemonize()
 	if (lfp > -1)
 	{
 		BString<100> str("%d\n", getpid());
-		if ( write(lfp, str, strlen(str) == -1 ) )
+		if (write(lfp, str, strlen(str)) == -1)
         {
             error("Starting daemon failed: unable to write PID to lock-file %s", m_options->GetLockFile());
             exit(1);
