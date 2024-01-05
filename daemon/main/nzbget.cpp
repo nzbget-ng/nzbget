@@ -950,6 +950,7 @@ void NZBGet::Daemonize()
 	dup2(d, 2);
 	close(d);
 
+#ifdef HAVE_SYS_CAPABILITY_H
     struct passwd *pw = getpwnam(m_options->GetDaemonUsername());
     if ( pw != NULL )
     {
@@ -992,6 +993,23 @@ void NZBGet::Daemonize()
             cap_free( caps );
         }
     }
+#else
+	if (getuid() == 0 || geteuid() == 0) {
+		struct passwd *pw;
+
+		if ((pw = getpwnam(m_options->GetDaemonUsername())) == NULL) {
+			error("User %s does not exist", m_options->GetDaemonUsername());
+			exit(1);
+		}
+
+		if (setgroups(1, &pw->pw_gid) ||
+		    setresgid(pw->pw_gid, pw->pw_gid, pw->pw_gid) ||
+		    setresuid(pw->pw_uid, pw->pw_uid, pw->pw_uid)) {
+			error("Unable to drop privileges to user %s", m_options->GetDaemonUsername());
+			exit(1);
+		}
+	}
+#endif
 
 	// set up lock-file
 	int lfp = -1;
