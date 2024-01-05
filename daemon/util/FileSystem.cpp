@@ -291,7 +291,11 @@ bool FileSystem::AllocateFile(const char* filename, int64 size, bool sparse, CSt
 		return false;
 	}
 
+#ifdef HAVE_POSIX_FALLOCATE
     if ( posix_fallocate( fileno( file ), 0, size ) != 0 ) {
+#else
+    if (ftruncate(fileno(file), size) != 0) {
+#endif
         errmsg = GetLastErrorMessage();
         fclose(file);
         return false;
